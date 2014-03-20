@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>乙女の工作部</title>
+
+    <link href="assets/css/hover_pack.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/colors/color-74c9be.css" rel="stylesheet">    
+    <link href="assets/css/animations.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    
+    <!-- JavaScripts needed at the beginning
+    ================================================== -->
+    <script type="text/javascript" src="http://alvarez.is/demo/marco/assets/js/twitterFetcher_v10_min.js"></script>
+
+    <!-- MAP SCRIPT - ALL CONFIGURATION IS PLACED HERE - VIEW OUR DOCUMENTATION FOR FURTHER INFORMATION -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+    <script type="text/javascript">
+        // When the window has finished loading create our google map below
+        google.maps.event.addDomListener(window, 'load', init);
+    
+        function init() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions = {
+                // How zoomed in you want the map to start at (always required)
+                zoom: 11,
+                
+                scrollwheel: false,
+
+                // The latitude and longitude to center the map (always required)
+                center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+                // How you would like to style the map. 
+                // This is where you would paste any style found on Snazzy Maps.
+                styles: [ {   featureType:'water',    stylers:[{color:'#74c9be'},{visibility:'on'}] },{   featureType:'landscape',    stylers:[{color:'#f2f2f2'}] },{   featureType:'road',   stylers:[{saturation:-100},{lightness:45}]  },{   featureType:'road.highway',   stylers:[{visibility:'simplified'}] },{   featureType:'road.arterial',    elementType:'labels.icon',    stylers:[{visibility:'off'}]  },{   featureType:'administrative',   elementType:'labels.text.fill',   stylers:[{color:'#444444'}] },{   featureType:'transit',    stylers:[{visibility:'off'}]  },{   featureType:'poi',    stylers:[{visibility:'off'}]  }]
+            };
+
+            // Get the HTML DOM element that will contain your map 
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('map');
+
+            // Create the Google Map using out element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+        }
+    </script>
+    
+    
+    <!-- Main Jquery & Hover Effects. Should load first -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/hover_pack.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body style="padding-top:50px;">
+
+    <! ========== ナビバー ==================================================================================================== 
+  =============================================================================================================================>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1 .nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <strong><a class="navbar-brand" href="#" style="color:#fff;">乙女の工作部</a></strong>
+        </div>
+
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1"  style="color:#fff;">
+          <ul class="nav navbar-nav">
+            <li><a href="#about_sns"  style="color:#fff;"><strong>SNSについて</strong></a></li>
+            <li><a href="#member"  style="color:#fff;"><strong>会員パターン</strong></a></li>
+            </li>
+            <li><a href="#can"  style="color:#fff;"><strong>できること</strong></a></li>
+          </ul>
+
+          <form class="form-inline navbar-right" action="http://sae.xpne.info/member/login/authMode/MailAddress" method="post" style="padding-top:7px;">
+            <div class="form-group">
+              <label for="authMailAddress_mail_address" class="sr-only">Eメールアドレス</label>
+              <input type="email" class="form-control" placeholder="Eメール" id="authMailAddress_mail_address" type="text" name="authMailAddress[mail_address]">
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="authMailAddress_password">Password</label>
+              <input type="password" class="form-control" placeholder="パスワード" id="authMailAddress_password" type="password" name="authMailAddress[password]">
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"><strong> 記憶する　</strong>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary" type="button">サインイン</button>
+          </form>
+        
+      </div>
+    </nav>
+
+
+  <! ========== トップ ==================================================================================================== 
+  =============================================================================================================================>
+    <div id="headerwrap">
+      <div class="container">
+      <div class="row centered">
+        <div class="col-lg-8 col-lg-offset-2 mt">
+          <h1 class="animation slideDown">デモサイト</h1>
+          <h3 style="color:white;">みんなで集まれるSNSのためにあなたの協力が必要です。下のボタンをクリックし、SNSに出資しようという意思を教えてください。</h3>
+          <p style="color:white;">グーグルフォームで意思を伝えよう！</p>
+          <a href="https://docs.google.com/forms/d/12JkDUJCPfQNFEMu908U4FmphfQczE8XHmpHTevbXw5E/viewform"><p class="mt"><button type="button" class="btn btn-primary btn-lg">申し込む</button></p></a>
+        </div>
+        
+      </div><!-- /row -->
+      </div><!-- /container -->
+    </div> <!-- /headerwrap -->
+
+      <! ========== SNSについて ================================================================================================ 
+  =============================================================================================================================>    
+    <div id="white">
+      <div class="container">
+        <div class="row mt">
+          <div class="col-lg-4 col-lg-offset-4 centered">
+            <h3>こんなSNSにするよ</h3>
+            <hr>
+          </div>
+        </div>
+        <div class="row mt">
+          <div class="col-lg-3">
+            <p class="capitalize">1</p>
+            <h4>かるい！</h4>
+            <p>サーバーが重くなることもなく、夜でも快適にSNSを楽しんでもらえるよ。もう休日を待たず、仕事が終わってからでもすぐ見れるし書き込める。</p>
+          </div>
+          <div class="col-lg-3">
+            <p class="capitalize">2</p>
+            <h4>かるい！</h4>
+            <p>サーバーが重くなることもなく、夜でも快適にSNSを楽しんでもらえるよ。もう休日を待たず、仕事が終わってからでもすぐ見れるし書き込める。</p>
+          </div>
+          <div class="col-lg-3">
+            <p class="capitalize">3</p>
+            <h4>かるい！</h4>
+            <p>サーバーが重くなることもなく、夜でも快適にSNSを楽しんでもらえるよ。もう休日を待たず、仕事が終わってからでもすぐ見れるし書き込める。</p>
+          </div>      
+  
+          <div class="col-lg-3">
+            <p class="capitalize">4</p>
+            <h4>かるい！</h4>
+            <p>サーバーが重くなることもなく、夜でも快適にSNSを楽しんでもらえるよ。もう休日を待たず、仕事が終わってからでもすぐ見れるし書き込める。</p>
+          </div>
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </div><!-- /white -->
+
+  <! ========== 会員パターン ==================================================================================================== 
+  =============================================================================================================================>    
+  <div class="container"> 
+
+    <div class="row mt centered ">
+      <div class="col-lg-4 col-lg-offset-4">
+        <h3>会員パターンは３種類！</h3>
+        <hr>
+      </div>
+    </div><!-- /row -->
+
+    <div class="row mt">
+      <div class="col-lg-4 col-md-4 col-xs-12 desc">
+        <a class="b-link-fade b-animate-go" href="#"><img width="350" src="assets/img/portfolio/port04.jpg" alt="" />
+          <div class="b-wrapper">
+              <h4 class="b-from-left b-animate b-delay03">スモール会員</h4>
+              <p class="b-from-right b-animate b-delay03">さっそく申し込む</p>
+          </div>
+        </a>
+        <p>スモール会員</p>
+        <p class="lead">スモール会員はこんなことができたり、こんなこともできたり、こんなことだってできるよ。</p>
+        <hr-d>
+      </div><!-- col-lg-4 -->
+      
+      <div class="col-lg-4 col-md-4 col-xs-12 desc">
+        <a class="b-link-fade b-animate-go" href="#"><img width="350" src="assets/img/portfolio/port05.jpg" alt="" />
+          <div class="b-wrapper">
+              <h4 class="b-from-left b-animate b-delay03">ミディアム会員</h4>
+              <p class="b-from-right b-animate b-delay03">さっそく申し込む</p>
+          </div>
+        </a>
+        <p>ミディアム会員</p>
+        <p class="lead">ミディアム会員はこんなことができたり、こんなこともできたり、こんなことだってできるよ。</p>
+        <hr-d>
+      </div><!-- col-lg-4 -->
+      
+      <div class="col-lg-4 col-md-4 col-xs-12 desc">
+        <a class="b-link-fade b-animate-go" href="#"><img width="350" src="assets/img/portfolio/port06.jpg" alt="" />
+          <div class="b-wrapper">
+              <h4 class="b-from-left b-animate b-delay03">ラージ会員</h4>
+              <p class="b-from-right b-animate b-delay03">さっそく申し込む</p>
+          </div>
+        </a>
+        <p>ラージ会員</p>
+        <p class="lead">ラージ会員はこんなことができたり、こんなこともできたり、こんなことだってできるよ。</p>
+        <hr-d>
+      </div><!-- col-lg-4 -->
+      
+    </div><!-- /row -->
+  </div><!-- /container -->
+
+  <! ========== できること ================================================================================================ 
+  =============================================================================================================================>    
+  <div id="white">
+    <div class="container" id="can">
+      <div class="row mt">
+        <div class="col-lg-4 col-lg-offset-4 centered">
+          <h3>みんなが集まればできる！</h3>
+          <hr>
+        </div>
+      </div>
+      <div class="row mt">
+        <div class="col-lg-4 centered si">
+          <i class="fa fa-flag"></i>
+          <h4>こんなこと</h4>
+          <p>こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。</p>
+        </div>
+        <div class="col-lg-4 centered si">
+          <i class="fa fa-flag"></i>
+          <h4>あんなこと</h4>
+          <p>こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。</p>
+        </div>
+        <div class="col-lg-4 centered si">
+          <i class="fa fa-flag"></i>
+          <h4>そんなこと</h4>
+          <p>こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。</p>
+        </div>
+       </div>
+
+       <div class="row mt">
+        <div class="col-lg-4 centered si">
+          <i class="fa fa-flag"></i>
+          <h4>いろんなこと</h4>
+          <p>こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。</p>
+        </div>
+        <div class="col-lg-4 centered si">
+          <i class="fa fa-flag"></i>
+          <h4>すごいこと</h4>
+          <p>こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。</p>
+        </div>
+        <div class="col-lg-4 centered si">
+          <i class="fa fa-flag"></i>
+          <h4>たのしいこと</h4>
+          <p>こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。こんなことできてこんなこともできるよ。</p>
+        </div>      
+      </div><!-- /row -->
+    </div><!-- /container -->
+  </div>
+
+  <! ========== 新規登録 ========================================================================================== 
+  =============================================================================================================================>    
+
+  <div id="grey">
+    <div class="container">
+      <div class="row mt">
+        <div class="col-lg-4 col-lg-offset-4 centered">
+          <h3>新規登録はこちら！</h3>
+          <hr>
+        </div>
+        <div class="col-lg-8 col-lg-offset-2 centered">
+          <p>SNSからメールがくるよ。メールに初期パスワードが書いてあるからSNSにアクセスしてみてね。</p>
+        </div><! --/col-lg-8 -->
+ 
+          <form class="col-lg-12"  role="form" action="http://sae.xpne.info/opAuthMailAddress/requestRegisterURL" method="POST">
+            <input type="hidden" name="request_register_url[course_id]" value="1">
+            <div class="input-group input-group-lg col-sm-offset-4 col-sm-4">
+              <input type="text" name="request_register_url[mail_address]"  class="center-block form-control input-lg" title="Enter you email." placeholder="メールアドレスを入力してね">
+              <span class="input-group-btn"><button type="submit" class="btn btn-lg btn-primary" type="button">送信</button></span>
+            </div>
+          </form>
+        
+      </div><!-- /row -->
+    </div><!-- /container -->
+  </div>
+  
+  <! ========== フッター ======================================================================================================== 
+  =============================================================================================================================>    
+  
+  <div id="f">
+    <div class="container">
+      <div class="row">
+        <!-- ADDRESS -->
+        <div class="col-lg-3">
+          <h4>コンタクト</h4>
+          <p>
+            <i class="fa fa-envelope-o"></i> mail@yourdomain.com
+          </p>
+        </div><! --/col-lg-3 -->
+        
+        <!-- TWEETS -->
+        <div class="col-lg-3">
+          <h4>twitter アカウント</h4>
+          <div id="showtweets"></div>
+          <a href="https://twitter.com/"><p>アカウント名 @hogehoge</p></a>
+        </div><!-- /col-lg-3 -->
+        
+        <!-- LATEST POSTS -->
+        <div class="col-lg-3">
+          <h4>facebook ページ</h4>
+          <a href="https://www.facebook.com/"><p>
+            なんたらプロジェクト<br/>
+          </p></a>
+        </div><!-- /col-lg-3 -->
+        
+        <!-- NEW PROJECT -->
+        <div class="col-lg-3">
+          <h4>プロジェクト運営事務局</h4>
+        </div><!-- /col-lg-3 -->
+        
+        
+      </div><! --/row -->
+    </div><!-- /container -->
+  </div><!-- /f -->
+  
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/retina.js"></script>
+
+
+    <script>
+    $(window).scroll(function() {
+      $('.si').each(function(){
+      var imagePos = $(this).offset().top;
+  
+      var topOfWindow = $(window).scrollTop();
+        if (imagePos < topOfWindow+400) {
+          $(this).addClass("slideUp");
+        }
+      });
+    });
+  </script>    
+
+
+
+  
+  </body>
+</html>
