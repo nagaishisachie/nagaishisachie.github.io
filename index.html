@@ -204,17 +204,31 @@
   </div>
   -->
 
-  <! ========== 登録まで ========================================================================================== 
+  <! ========== 新規登録 ========================================================================================== 
   =============================================================================================================================>    
 
   <div id="white">
-      <div class="container">
+      <div class="container" id="entry">
         <div class="row mt">
           <div class="col-lg-4 col-lg-offset-4 centered">
-            <h3>3ステップで登録</h3>
+            <h3>新規登録</h3>
             <hr>
           </div>
         </div>
+
+        <div class="row mt">
+          <div class="col-lg-8 col-lg-offset-2 centered">
+          <p>このフォームからご登録ください。</p>
+          </div>
+          <form class="col-lg-12"  role="form" action="http://sae.xpne.info/opAuthMailAddress/requestRegisterURL" method="POST">
+            <input type="hidden" name="request_register_url[course_id]" value="1">
+            <div class="input-group input-group-lg col-sm-offset-4 col-sm-4">
+              <input type="text" name="request_register_url[mail_address]"  class="center-block form-control input-lg" title="Enter you email." placeholder="メールアドレスを入力してね">
+              <span class="input-group-btn"><button type="submit" class="btn btn-lg btn-primary" type="button">送信</button></span>
+            </div>
+          </form>
+        </div>
+
         <div class="row mt">
           <div class="col-lg-4">
             <p class="capitalize">1</p>
@@ -230,36 +244,11 @@
             <p class="capitalize">3</p>
             <h4>データ入力</h4>
             <p>プロフィール項目・カード情報を入力送信で完了です。</p>
-          </div>      
-        </div><!-- /row -->
+          </div>
+          </div>
+
       </div><!-- /container -->
     </div><!-- /white -->
-
-  <! ========== 新規登録 ========================================================================================== 
-  =============================================================================================================================>    
-
-  <div id="white">
-    <div class="container" id="entry">
-      <div class="row mt">
-        <div class="col-lg-4 col-lg-offset-4 centered">
-          <h3>新規登録はこちら！</h3>
-          <hr>
-        </div>
-        <div class="col-lg-8 col-lg-offset-2 centered">
-          <p>SNSからメールがくるよ。メールに初期パスワードが書いてあるからSNSにアクセスしてみてね。</p>
-        </div><! --/col-lg-8 -->
- 
-          <form class="col-lg-12"  role="form" action="http://sae.xpne.info/opAuthMailAddress/requestRegisterURL" method="POST">
-            <input type="hidden" name="request_register_url[course_id]" value="1">
-            <div class="input-group input-group-lg col-sm-offset-4 col-sm-4">
-              <input type="text" name="request_register_url[mail_address]"  class="center-block form-control input-lg" title="Enter you email." placeholder="メールアドレスを入力してね">
-              <span class="input-group-btn"><button type="submit" class="btn btn-lg btn-primary" type="button">送信</button></span>
-            </div>
-          </form>
-        
-      </div><!-- /row -->
-    </div><!-- /container -->
-  </div>
 
   <! ========== 運営メンバー ==================================================================================================== 
   =============================================================================================================================> 
