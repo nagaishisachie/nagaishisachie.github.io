@@ -1,3 +1,41 @@
 nav {
 	background:#1b1b1b;
 }
+
+#headerwrap{
+	margin-top: -20px;
+
+}
+.entrysheet h1.hidden-xs{
+	letter-spacing: 1em;
+	text-decoration: underline;
+	font-size: 50px;
+	margin-top: 50px;
+	margin-bottom: 80px;
+}
+
+.entrysheet h1.visible-xs{
+	letter-spacing: 0.5em;
+	text-decoration: underline;
+	font-size: 40px;
+	margin-bottom: 40px;
+}
+
+
+.entrysheet p{
+	margin-bottom: 50px;	
+}
+.tj-h1 {
+	margin-bottom: 15px;
+}
+.tj-h1 h1{
+	margin-top: 35px;
+}
+
+.tj-h2 h2{
+	background-color: #efefef;
+	height: 50px;
+	padding: 9px;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}

@@ -630,7 +630,7 @@ p.capitalize:first-letter {
   list-style:none;
   overflow:hidden;
 }
-
+/*
 #f ul li:before {
 	content: "\f099";
 	font-family: 'FontAwesome';
@@ -644,7 +644,7 @@ p.capitalize:first-letter {
 	color: white;
 	float: left;
 }
-
+*/
 #f .tweet {
 	float: right;
 	width: 85%;

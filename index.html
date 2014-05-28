@@ -16,48 +16,11 @@
 
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
-    <link href="assets/css/colors/color-74c9be.css" rel="stylesheet">    
+    <link href="assets/css/colors/color-009974.css" rel="stylesheet">    
     <link href="assets/css/animations.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/custom.css" rel="stylesheet">
-    
-    <!-- JavaScripts needed at the beginning
-    ================================================== -->
-    <script type="text/javascript" src="http://alvarez.is/demo/marco/assets/js/twitterFetcher_v10_min.js"></script>
-
-    <!-- MAP SCRIPT - ALL CONFIGURATION IS PLACED HERE - VIEW OUR DOCUMENTATION FOR FURTHER INFORMATION -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
-    <script type="text/javascript">
-        // When the window has finished loading create our google map below
-        google.maps.event.addDomListener(window, 'load', init);
-    
-        function init() {
-            // Basic options for a simple Google Map
-            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-            var mapOptions = {
-                // How zoomed in you want the map to start at (always required)
-                zoom: 11,
-                
-                scrollwheel: false,
-
-                // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(40.6700, -73.9400), // New York
-
-                // How you would like to style the map. 
-                // This is where you would paste any style found on Snazzy Maps.
-                styles: [ {   featureType:'water',    stylers:[{color:'#74c9be'},{visibility:'on'}] },{   featureType:'landscape',    stylers:[{color:'#f2f2f2'}] },{   featureType:'road',   stylers:[{saturation:-100},{lightness:45}]  },{   featureType:'road.highway',   stylers:[{visibility:'simplified'}] },{   featureType:'road.arterial',    elementType:'labels.icon',    stylers:[{visibility:'off'}]  },{   featureType:'administrative',   elementType:'labels.text.fill',   stylers:[{color:'#444444'}] },{   featureType:'transit',    stylers:[{visibility:'off'}]  },{   featureType:'poi',    stylers:[{visibility:'off'}]  }]
-            };
-
-            // Get the HTML DOM element that will contain your map 
-            // We are using a div with id="map" seen below in the <body>
-            var mapElement = document.getElementById('map');
-
-            // Create the Google Map using out element and options defined above
-            var map = new google.maps.Map(mapElement, mapOptions);
-        }
-    </script>
-    
-    
+        
     <!-- Main Jquery & Hover Effects. Should load first -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="assets/js/hover_pack.js"></script>
@@ -71,44 +34,19 @@
     <![endif]-->
   </head>
 
-  <body style="padding-top:50px;">
+  <body>
 
     <! ========== ナビバー ==================================================================================================== 
   =============================================================================================================================>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1 .nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
           <strong><a class="navbar-brand" href="#">乙女の工作部</a></strong>
         </div>
-
-        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" >
-          <ul class="nav navbar-nav">
-            <li><a href="#action"><strong>活動について</strong></a></li>
-            <li><a href="#entry"><strong>入部登録</strong></a></li>
-          </ul>
-
-          <form class="form-inline navbar-right" action="http://otome.pne.jp/member/login/authMode/MailAddress" method="post" style="padding-top:7px;">
-            <div class="form-group">
-              <label for="authMailAddress_mail_address" class="sr-only">Eメールアドレス</label>
-              <input type="email" class="form-control" placeholder="Eメール" id="authMailAddress_mail_address" type="text" name="authMailAddress[mail_address]">
-            </div>
-            <div class="form-group">
-              <label class="sr-only" for="authMailAddress_password">Password</label>
-              <input type="password" class="form-control" placeholder="パスワード" id="authMailAddress_password" type="password" name="authMailAddress[password]">
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox"><strong> 記憶する　</strong>
-              </label>
-            </div>
-            <button type="submit" class="btn btn-primary" type="button">サインイン</button>
-          </form>
-        
+        <ul class="nav navbar-nav hidden-xs hidden-sm">
+          <li><a href="#action"><strong>活動について</strong></a></li>
+          <li><a href="#entry"><strong>入部登録</strong></a></li>
+        </ul>
       </div>
     </nav>
 
@@ -126,80 +64,81 @@
       </div><!-- /container -->
     </div> <!-- /headerwrap -->
 
-    <! ========== この活動について ================================================================================================= 
+    <! ========== 活動について ================================================================================================= 
   =============================================================================================================================>    
     <div id="white">
       <div class="container" id="action">
         <div class="row mt centered">
           <div class="col-lg-4 col-lg-offset-4">
-            <h3>この活動について</h3>
+            <h3>活動について</h3>
             <hr>
           </div><!-- /col-lg-4 -->
         </div><!-- /row -->
         <div class="row mt">
           <div class="col-lg-8 col-lg-offset-2">
-            <p>「可愛い、作れたら・・・」を一緒に形にしていきませんか？乙女の工作部はやる気がある女性ならどなたでもご参加頂けます。みんなで一緒に楽しく作って遊ぶのが目的です。手芸の枠を超えた乙女のＤＩＹ♪</p>
+            <p class="lead">「可愛い、作れたら・・・」を一緒に形にしていきませんか？乙女の工作部はやる気がある女性ならどなたでもご参加頂けます。みんなで一緒に楽しく作って遊ぶのが目的です。手芸の枠を超えた乙女のＤＩＹ♪</p>
           </div><! --/col-lg-8 -->
         </div><!-- /row -->
         <div class="row mt centered">
           <div class="col-lg-4 col-lg-offset-4">
-            <h3>工作部の様子</h3>
+            <h3>活動風景</h3>
             <hr>
           </div><!-- /col-lg-4 -->
         </div><!-- /row -->
 
         <div class="row">
-          <div class="col-xs-8 col-sm-6 col-md-4 col-lg-3 col-xs-offset-2 col-sm-offset-0" style="min-height: 250px;">
+          <div class="col-xs-10 col-sm-6 col-md-4 col-lg-3 col-xs-offset-1 col-sm-offset-0" style="min-height: 290px;">
             <a href="./assets/img/1867903.jpg" class="thumbnail">
               <img class="img-responsive" src="./assets/img/1867903.jpg" alt="...">
             </a>
           </div>
-          <div class="col-xs-8 col-sm-6 col-md-4 col-lg-3 col-xs-offset-2 col-sm-offset-0" style="min-height: 250px;">
+          <div class="col-xs-10 col-sm-6 col-md-4 col-lg-3 col-xs-offset-1 col-sm-offset-0" style="min-height: 290px;">
             <a href="./assets/img/1867902.jpg" class="thumbnail">
               <img class="img-responsive" src="./assets/img/1867902.jpg" alt="...">
             </a>
           </div>
-          <div class="col-xs-8 col-sm-6 col-md-4 col-lg-3 col-xs-offset-2 col-sm-offset-0" style="min-height: 250px;">
+          <div class="col-xs-10 col-sm-6 col-md-4 col-lg-3 col-xs-offset-1 col-sm-offset-0" style="min-height: 290px;">
             <a href="./assets/img/18679001.png" class="thumbnail">
               <img class="img-responsive" src="./assets/img/18679001.png" alt="...">
             </a>
           </div>
-          <div class="col-xs-8 col-sm-6 col-md-4 col-lg-3 col-xs-offset-2 col-sm-offset-0" style="min-height: 250px;">
+          <div class="col-xs-10 col-sm-6 col-md-4 col-lg-3 col-xs-offset-1 col-sm-offset-0" style="min-height: 290px;">
             <a href="./assets/img/1867899.jpg" class="thumbnail">
               <img class="img-responsive" src="./assets/img/1867899.jpg" alt="...">
             </a>
           </div>
-          <div class="col-xs-8 col-sm-6 col-md-4 col-lg-3 col-xs-offset-2 col-sm-offset-0" style="min-height: 250px;">
+          <div class="col-xs-10 col-sm-6 col-md-4 col-lg-3 col-xs-offset-1 col-sm-offset-0" style="min-height: 290px;">
             <a href="./assets/img/1867901.jpg" class="thumbnail">
               <img class="img-responsive" src="./assets/img/1867901.jpg" alt="...">
             </a>
           </div>
 
-          <div class="col-xs-8 col-sm-6 col-md-4 col-lg-3 col-xs-offset-2 col-sm-offset-0" style="min-height: 250px;">
-            <a href="./assets/img/1867901.jpg" class="thumbnail">
+          <div class="col-xs-10 col-sm-6 col-md-4 col-lg-3 col-xs-offset-1 col-sm-offset-0" style="min-height: 290px;">
+            <a href="./assets/img/2064391.jpg" class="thumbnail">
               <img class="img-responsive" src="./assets/img/2064391.jpg" alt="...">
             </a>
           </div>            
 
-          <div class="col-xs-8 col-sm-6 col-md-4 col-lg-3 col-xs-offset-2 col-sm-offset-0" style="min-height: 250px;">
-            <a href="./assets/img/1867901.jpg" class="thumbnail">
+          <div class="col-xs-10 col-sm-6 col-md-4 col-lg-3 col-xs-offset-1 col-sm-offset-0" style="min-height: 290px;">
+            <a href="./assets/img/2064401.jpg" class="thumbnail">
               <img class="img-responsive" src="./assets/img/2064401.jpg" alt="...">
             </a>
           </div>            
 
-          <div class="col-xs-8 col-sm-6 col-md-4 col-lg-3 col-xs-offset-2 col-sm-offset-0" style="min-height: 250px;">
-            <a href="./assets/img/1867901.jpg" class="thumbnail">
+          <div class="col-xs-10 col-sm-6 col-md-4 col-lg-3 col-xs-offset-1 col-sm-offset-0" style="min-height: 290px;">
+            <a href="./assets/img/2064402.jpg" class="thumbnail">
               <img class="img-responsive" src="./assets/img/2064402.jpg" alt="...">
             </a>
           </div>            
 
         </div><!-- /row -->
-        <div class="center-block" style="width: 350px;">
-          <p class="text-center">4/8に開催した体験入部ワークショップの様子です。
-            <a href="http://twitpic.com/e0o6tb" title="2014/4/9アビエタージュにてロゼット手芸部開催の模様を動画にしました♪  
-Movie by SlideStory... on Twitpic"><img src="http://p.pne.jp/d/300/201404091542.png" width="300"  alt="2014/4/9アビエタージュにてロゼット手芸部開催の模様を動画にしました♪  
-Movie by SlideStory... on Twitpic"></a>
-          </p>
+        <div class="center-block">
+          <p class="text-center">4/8に開催した体験入部ワークショップの様子です。</p>
+          <a href="http://twitpic.com/e0o6tb" title="2014/4/9アビエタージュにてロゼット手芸部開催の模様を動画にしました♪  
+Movie by SlideStory... on Twitpic">
+            <img class="img-responsive" src="http://p.pne.jp/d/300/201404091542.png" width="300"  alt="2014/4/9アビエタージュにてロゼット手芸部開催の模様を動画にしました♪  
+Movie by SlideStory... on Twitpic">
+          </a>
         </div>
       </div><!-- /container -->
     </div><!-- /black -->
@@ -209,8 +148,8 @@ Movie by SlideStory... on Twitpic"></a>
 
     <div id="white">
       <div class="container" id="schedule">
-        <div class="row mt">
 
+        <div class="row mt">
           <div class="col-lg-4 col-lg-offset-4 centered">
             <h3>スケジュール</h3>
             <hr>
@@ -218,9 +157,8 @@ Movie by SlideStory... on Twitpic"></a>
         </div>
 
         <div class="col-md-6">
-          <h4>4月 体験入部ワークショップ</h4>
-          <p>※4月の体験入部は無事、終了いたしました！たくさんの体験入部ありがとうございました。次回体験入部は未定です。</p>
-          <p>ロゼット制作をして遊びます♪以下のパーツはこちらでご用意しますのでお気軽に遊びに来て下さいね。○くるみボタン制作キット ○布 ○フリルリボン ○リボン ○台紙 お好みの布、リボンがありましたら持込大歓迎です♪</p>
+          <h4>体験イベント</h4>
+          <p>乙女の工作部に興味がある方向けに、部員にならなくても参加できる体験イベントをお知らせします。</p>
 
           <div class="panel panel-default">
             <div class="panel-heading">スケジュール</div>
@@ -234,26 +172,32 @@ Movie by SlideStory... on Twitpic"></a>
             </tr>
             </thead>
             <tbody>
-            <tr>
+            <tr class="active">
             <td>04月08日（火）</td>
             <td>19:30〜21:00</td>
-            <td>新宿アビエタージュ <a href="http://www.abilletage.com/" target="_blank" class="btn btn-default btn-xs">SITE</a></td>
+            <td><a href="http://www.abilletage.com/" target="_blank">新宿アビエタージュ</a></td>
+            <td>1,500円</td>
+            </tr>
+            <tr class="active">
+            <td>04月22日（火）</td>
+            <td>19:30〜21:00</td>
+            <td><a href="http://www.abilletage.com/" target="_blank">新宿アビエタージュ</a></td>
             <td>1,500円</td>
             </tr>
             <tr>
-            <td>04月22日（火）</td>
-            <td>19:30〜21:00</td>
-            <td>新宿アビエタージュ <a href="http://www.abilletage.com/" target="_blank" class="btn btn-default btn-xs">SITE</a></td>
-            <td>1,500円</td>
+            <td>07月08日（火）</td>
+            <td>18:15〜21:00</td>
+            <td><a href="http://www.nouryousen.jp/" target="_blank">東京湾納涼船ツアー</a></td>
+            <td>1,600円</td>
             </tr>
+
             </tbody>
             </table>
           </div>
         </div>
         <div class="col-md-6">
-          <h4>5月以降 通常活動</h4>
-          <p>４月に引き続き、ロゼット制作をして遊ぶ予定です。４月入部部員と相談し制作物は変更になる可能性があります。</p>
-          <p>※活動場所は当日参加予定の部員のみに告知します。</p>
+          <h4>通常活動</h4>
+          <p>部員を対象とした通常活動のスケジュールです。見学希望の方はご連絡ください。</p>
           <div class="panel panel-default">
             <div class="panel-heading">スケジュール</div>
             <table class="table">
@@ -262,17 +206,17 @@ Movie by SlideStory... on Twitpic"></a>
             <th>開催日</th>
             <th>時間</th>
             <th>場所</th>
-            <th>参加費</th>            
+            <th>ドロップ参加費</th>            
             </tr>
             </thead>
             <tbody>
-            <tr>
+            <tr class="active">
             <td>05月13日（火）</td>
             <td>18:00〜21:00</td>
             <td>原宿のカフェにて</td>
             <td>1,000円</td>
             </tr>
-            <tr>
+            <tr class="active">
             <td>05月20日（火）</td>
             <td>18:00〜21:00</td>
             <td>原宿のカフェにて</td>
@@ -291,6 +235,32 @@ Movie by SlideStory... on Twitpic"></a>
       </div>
     </div>
 
+
+    <div id="white">
+      <div class="container" id="schedule">
+        
+        <div class="row mt">
+          <div class="col-lg-4 col-lg-offset-4 centered">
+            <h3>ご連絡</h3>
+            <hr>
+          </div>
+        </div>
+
+        <h4>直接連絡したい</h4>
+        <p>イベントの参加、入会についてのお問い合せは、フッターのメールアドレス宛にお願いします。</p>
+
+        <h4>ひとまず様子をみたい</h4>
+        <p>継続的に乙女の工作部の情報が欲しい場合は、ニュースレターにご登録ください。体験入部やお茶会などの乙女の工作部のイベント案内を送らせていただきます。同様の情報はTwitter <a href="https://twitter.com/otomenokousakub">@otomenokousakub</a>でもお知らせしています。</p>
+        <p>※ニュースレターの送信は最大週1通</p>
+
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <a href="#f" class="btn btn-success btn-lg btn-block">フッターの連絡先へ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
   <! ========== 部費の使い道 ==================================================================================================== 
   =============================================================================================================================>  
   <!--  
@@ -333,15 +303,25 @@ Movie by SlideStory... on Twitpic"></a>
           </div>
         </div>
         <div class="row mt">
-          <div class="col-lg-8 col-lg-offset-2 centered">
+          <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 entrysheet">
             <div class="panel panel-default">
               <div class="panel-body">
-                <p>活動名：乙女の工作部<br>部費：3,000円／月（カード決済）</p>
-                <form class="col-lg-12"  role="form" action="http://otome.pne.jp/opAuthMailAddress/requestRegisterURL" method="POST">
+                <h1 class="text-center hidden-xs">入部届</h1>
+                <h1 class="text-center visible-xs">入部届</h1>
+
+                <p class="text-center lead">私は乙女の工作部に<br>入部することを希望します。</p>
+                <p class="text-center lead">
+                    乙女の工作部                            <br>
+                    活動費：3000円／月（カード決済）
+                    <br>定期活動：月3〜4回 通常活動</p>
+                <form class="form" role="form" action="http://otome.pne.jp/opAuthMailAddress/requestRegisterURL" method="POST">
                   <input type="hidden" name="request_register_url[course_id]" value="1">
-                  <div class="input-group input-group-lg col-sm-offset-2 col-sm-8 col-xs-12">
-                    <input type="text" name="request_register_url[mail_address]"  class="center-block form-control input-lg" title="Enter you email." placeholder="メールアドレスを入力して下さい">
-                    <span class="input-group-btn"><button type="submit" class="btn btn-lg btn-primary" type="button">送信</button></span>
+                  <div class="form-group">
+                    <label for="inputEmail3">メールアドレス</label>
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="request_register_url[mail_address]">
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-lg btn-success btn-block">入部申し込みする</button>
                   </div>
                 </form>
               </div>
@@ -370,30 +350,6 @@ Movie by SlideStory... on Twitpic"></a>
       </div><!-- /container -->
     </div><!-- /white -->
 
-  <! ========== 運営メンバー ==================================================================================================== 
-  =============================================================================================================================> 
-  <div id="white">
-  <div class="container" id="direction"> 
-
-    <div class="row mt centered ">
-      <div class="col-lg-4 col-lg-offset-4">
-        <h3>運営メンバー</h3>
-        <hr>
-      </div>
-    </div>
-
-    <div class="row mt">
-      <div class="col-lg-4 col-md-4 col-xs-12 desc">
-        <p>部長：タケダ  <a class="b-link-fade b-animate-go" href="https://twitter.com/aym_bamboo">@aym_bamboo</a></p>
-      </div>
-      
-      <div class="col-lg-4 col-md-4 col-xs-12 desc">
-        <p>副部長：あゆみわ <a class="b-link-fade b-animate-go" href="https://twitter.com/ayumimiwa">@ayumimiwa</a></p>
-      </div>
-            
-    </div>
-  </div>
-  </div>
   
 
 
@@ -409,11 +365,37 @@ Movie by SlideStory... on Twitpic"></a>
 
     <div class="row mt centered">
 
-<a class="twitter-timeline" href="https://twitter.com/search?q=%23%E4%B9%99%E5%A5%B3%E3%81%AE%E5%B7%A5%E4%BD%9C%E9%83%A8" data-widget-id="453813865122258945">#乙女の工作部 に関するツイート</a>
+    <div class="col-md-6">
+
+
+
+      <h4>乙女の工作部のお知らせ</h4>
+
+
+      <a class="twitter-timeline" href="https://twitter.com/otomenokousakub" data-widget-id="471138399047282689">@otomenokousakub からのツイート</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
     </div>
+
+    <div class="col-md-6">
+
+
+
+      <h4>乙女の工作部のお気に入り</h4>
+      <a class="twitter-timeline" href="https://twitter.com/otomenokousakub/favorites" data-widget-id="469070268426514433">乙女の工作部関連ツイート</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  
+    </div>
+
+
+
+
+    </div>
+
+
+
+
   </div>
   </div>
 
@@ -431,13 +413,32 @@ Movie by SlideStory... on Twitpic"></a>
       <div class="row">
         
                 <!-- ADDRESS -->
-        <div class="col-lg-3">
-          <h4>コンタクト</h4>
+        <div class="col-md-6">
+          <h4>連絡先</h4>
           <p>
-            <i class="fa fa-envelope-o"></i> otomenokousakubu@gmail.com
+            メールでお問い合わせください。<br>
+            <span class="glyphicon glyphicon-envelope"></span><a href="mailto:otomenokousakubu@gmail.com">otomenokousakubu@gmail.com</a><br>
+            <span class="glyphicon glyphicon-phone"></span><a href="sms:otomenokousakubu@gmail.com">SMSで送信(iPhone向け)</a>
+          </p>
+
+          <h4>運営メンバー</h4>
+          <p>
+            部長：タケダ  <a class="b-link-fade b-animate-go" href="https://twitter.com/aym_bamboo">@aym_bamboo</a><br>
+            副部長：あゆみわ <a class="b-link-fade b-animate-go" href="https://twitter.com/ayumimiwa">@ayumimiwa</a>
           </p>
         </div>
         
+        <div class="col-md-6">
+          <h4>ニュースレター登録</h4>
+          <form role="form" action="https://pro.form-mailer.jp/fm/service/Forms/complete" method="post" ENCTYPE="multipart/form-data">
+            <div class="form-group">
+              <input type="hidden" name="key" value="06c68fb259483" >
+              <input type="hidden" name="code" value="utf8">
+              <input type="email" name="field_980331" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <button name="submit" type="submit" class="btn btn-success btn-lg btn-block">ニュースレター登録</button>
+          </form>
+        </div>
       </div><! --/row -->
     </div><!-- /container -->
   </div><!-- /f -->
@@ -445,8 +446,7 @@ Movie by SlideStory... on Twitpic"></a>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/retina.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
 
 
     <script>
@@ -462,8 +462,5 @@ Movie by SlideStory... on Twitpic"></a>
     });
   </script>    
 
-
-
-  
   </body>
 </html>
