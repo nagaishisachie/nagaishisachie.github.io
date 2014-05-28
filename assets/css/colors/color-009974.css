@@ -12,60 +12,60 @@
 
 /* Links */
 a {
-    color: #74c9be;
+    color: #009974;
 }
 
 .si i {
-	color: #74c9be;
+	color: #009974;
 }
 
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
 color: #ffffff;
-background-color: #74c9be;
+background-color: #009974;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-color: #74c9be;
+color: #009974;
 }
 
 .btn-theme {
-  background-color: #74c9be;
+  background-color: #009974;
 }
 
 .tabbable .nav-stacked > li:active, li:focus, li.active h4 {
-	color: #74c9be;
+	color: #009974;
 }
 
 #cta-bar:hover {
-	background: #74c9be;	
+	background: #009974;	
 }
 
 p.capitalize:first-letter {
-	background: #74c9be; 
+	background: #009974; 
 }
 
 .team-info {
-  background: #74c9be;
+  background: #009974;
 }
 
 #black i {
-	color: #74c9be;
+	color: #009974;
 }
 
 .progress-bar-theme {
-  background-color: #74c9be;
+  background-color: #009974;
 }
 
 .team-stat i {
-	color: #74c9be;
+	color: #009974;
 }
 
 .pricing-table-plan {
-	border-top: 4px solid #74c9be;
+	border-top: 4px solid #009974;
 }
 
 .blog-post blockquote {
-  border-left: 4px solid #74c9be;
+  border-left: 4px solid #009974;
 }
 
